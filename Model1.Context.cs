@@ -39,12 +39,7 @@ namespace Pizzeria
         public DbSet<LIVRAISON> LIVRAISON { get; set; }
         public DbSet<PAIEMENT_FACT> PAIEMENT_FACT { get; set; }
         public DbSet<QUARTIER> QUARTIER { get; set; }
-        public DbSet<MSreplication_options> MSreplication_options { get; set; }
         public DbSet<spt_fallback_db> spt_fallback_db { get; set; }
-        public DbSet<spt_fallback_dev> spt_fallback_dev { get; set; }
-        public DbSet<spt_fallback_usg> spt_fallback_usg { get; set; }
-        public DbSet<spt_monitor> spt_monitor { get; set; }
-        public DbSet<spt_values> spt_values { get; set; }
     
         public virtual int sp_MScleanupmergepublisher()
         {

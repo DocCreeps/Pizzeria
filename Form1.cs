@@ -16,16 +16,17 @@ namespace Pizzeria
         {
             InitializeComponent();
         }
-        masterEntities db = new masterEntities();
+
+        readonly masterEntities db = new masterEntities();
         private void Form1_Load(object sender, EventArgs e)
         {
             dataPizza.DataSource = db.CLIENT.ToList();
 
 
-            List<CLIENT> ListC = new List<CLIENT>();
-            ListC.AddRange(db.CLIENT.ToList());
-            comboClient.ValueMember = "NumClient";
-            comboClient.DisplayMember = "NomClient";
+            List<CataloguePizza> ListC = new List<CataloguePizza>();
+            ListC.AddRange(db.CataloguePizza.ToList());
+            comboClient.ValueMember = "NumPizza";
+            comboClient.DisplayMember = "NomPizza";
             comboClient.DataSource = ListC;
         }
 

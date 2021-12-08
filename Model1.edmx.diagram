@@ -16,12 +16,7 @@
         <EntityTypeShape EntityType="masterModel.LIVRAISON" Width="1.5" PointX="10.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="masterModel.PAIEMENT_FACT" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="masterModel.QUARTIER" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="masterModel.MSreplication_options" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="masterModel.spt_fallback_db" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="masterModel.spt_fallback_dev" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="masterModel.spt_fallback_usg" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="masterModel.spt_monitor" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="masterModel.spt_values" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="masterModel.FK__ADRESSE__NumQuar__25A691D2" ManuallyRouted="false" />
         <AssociationConnector Association="masterModel.FK__ADRESSE__NumQuar__39AD8A7F" ManuallyRouted="false" />
         <AssociationConnector Association="masterModel.FK__LIVRAISON__NumAd__2C538F61" ManuallyRouted="false" />

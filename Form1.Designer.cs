@@ -48,7 +48,6 @@
             this.dataPizza.Name = "dataPizza";
             this.dataPizza.Size = new System.Drawing.Size(391, 150);
             this.dataPizza.TabIndex = 1;
-            this.dataPizza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPizza_CellContentClick);
             // 
             // Form1
             // 
