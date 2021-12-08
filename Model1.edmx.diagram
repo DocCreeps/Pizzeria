@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="72eaf734422342598162a3f02fedebf9" Name="Diagram1">
+        <EntityTypeShape EntityType="masterModel.ADRESSE" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.BON_LIV" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.CataloguePizza" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.CDE_CLIENT" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.CLIENT" Width="1.5" PointX="0.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.FABRICATION" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.FACTURE_CLIENT" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.LIGNES_CDE_CLIENT" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.LIVRAISON" Width="1.5" PointX="10.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.PAIEMENT_FACT" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.QUARTIER" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.MSreplication_options" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_db" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_dev" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_usg" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_monitor" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_values" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="masterModel.FK__ADRESSE__NumQuar__25A691D2" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__ADRESSE__NumQuar__39AD8A7F" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIVRAISON__NumAd__2C538F61" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIVRAISON__NumAd__405A880E" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__BON_LIV__NumCdeC__269AB60B" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__BON_LIV__NumCdeC__3AA1AEB8" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__FACTURE_C__NumBo__297722B6" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__FACTURE_C__NumBo__3D7E1B63" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIVRAISON__NumBo__2D47B39A" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIVRAISON__NumBo__414EAC47" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__FABRICATI__NumPi__2882FE7D" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__FABRICATI__NumPi__3C89F72A" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIGNES_CD__NumPi__2B5F6B28" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIGNES_CD__NumPi__3F6663D5" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__CDE_CLIEN__NumCl__278EDA44" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__CDE_CLIEN__NumCl__3B95D2F1" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIGNES_CD__NumCd__2A6B46EF" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__LIGNES_CD__NumCd__3E723F9C" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__PAIEMENT___NumFa__2E3BD7D3" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK__PAIEMENT___NumFa__4242D080" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
