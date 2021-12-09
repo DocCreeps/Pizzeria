@@ -17,9 +17,7 @@ namespace Pizzeria
         public CataloguePizza()
         {
             this.FABRICATION = new HashSet<FABRICATION>();
-            this.FABRICATION1 = new HashSet<FABRICATION>();
             this.LIGNES_CDE_CLIENT = new HashSet<LIGNES_CDE_CLIENT>();
-            this.LIGNES_CDE_CLIENT1 = new HashSet<LIGNES_CDE_CLIENT>();
         }
     
         public int NumPizza { get; set; }
@@ -28,8 +26,6 @@ namespace Pizzeria
         public double PrixPizza { get; set; }
     
         public virtual ICollection<FABRICATION> FABRICATION { get; set; }
-        public virtual ICollection<FABRICATION> FABRICATION1 { get; set; }
         public virtual ICollection<LIGNES_CDE_CLIENT> LIGNES_CDE_CLIENT { get; set; }
-        public virtual ICollection<LIGNES_CDE_CLIENT> LIGNES_CDE_CLIENT1 { get; set; }
     }
 }

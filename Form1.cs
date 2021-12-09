@@ -17,7 +17,7 @@ namespace Pizzeria
             InitializeComponent();
         }
 
-        masterEntities db = new masterEntities();
+        PizzeriaEntities db = new PizzeriaEntities();
 
         private ucPizza listePizza = new ucPizza();
         private ucClient listeClient = new ucClient();

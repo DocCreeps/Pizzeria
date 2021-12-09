@@ -12,15 +12,12 @@ namespace Pizzeria
     using System;
     using System.Collections.Generic;
     
-    public partial class LIVRAISON
+    public partial class sysdiagrams
     {
-        public int NumLivraison { get; set; }
-        public int NumBonLiv { get; set; }
-        public Nullable<System.DateTime> DateDepart { get; set; }
-        public Nullable<System.DateTime> DateArrivee { get; set; }
-        public int NumAdresse { get; set; }
-    
-        public virtual ADRESSE ADRESSE { get; set; }
-        public virtual BON_LIV BON_LIV { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -12,14 +12,11 @@ namespace Pizzeria
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Objects;
-    using System.Data.Objects.DataClasses;
-    using System.Linq;
     
-    public partial class masterEntities : DbContext
+    public partial class PizzeriaEntities : DbContext
     {
-        public masterEntities()
-            : base("name=masterEntities")
+        public PizzeriaEntities()
+            : base("name=PizzeriaEntities")
         {
         }
     
@@ -37,18 +34,9 @@ namespace Pizzeria
         public DbSet<FACTURE_CLIENT> FACTURE_CLIENT { get; set; }
         public DbSet<LIGNES_CDE_CLIENT> LIGNES_CDE_CLIENT { get; set; }
         public DbSet<LIVRAISON> LIVRAISON { get; set; }
+        public DbSet<LIVREUR> LIVREUR { get; set; }
         public DbSet<PAIEMENT_FACT> PAIEMENT_FACT { get; set; }
         public DbSet<QUARTIER> QUARTIER { get; set; }
-        public DbSet<spt_fallback_db> spt_fallback_db { get; set; }
-    
-        public virtual int sp_MScleanupmergepublisher()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_MScleanupmergepublisher");
-        }
-    
-        public virtual int sp_MSrepl_startup()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_MSrepl_startup");
-        }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace Pizzeria
         {
             InitializeComponent();
         }
-
+        PizzeriaEntities db = new PizzeriaEntities();
         private void dataLivreur_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -24,7 +24,7 @@ namespace Pizzeria
 
         private void ucFab_Load(object sender, EventArgs e)
         {
-
+            dataLivreur.DataSource = db.LIVREUR.ToList();
         }
     }
 }

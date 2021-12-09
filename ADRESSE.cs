@@ -17,7 +17,6 @@ namespace Pizzeria
         public ADRESSE()
         {
             this.LIVRAISON = new HashSet<LIVRAISON>();
-            this.LIVRAISON1 = new HashSet<LIVRAISON>();
         }
     
         public int NumAdresse { get; set; }
@@ -25,8 +24,6 @@ namespace Pizzeria
         public int NumQuartier { get; set; }
     
         public virtual QUARTIER QUARTIER { get; set; }
-        public virtual QUARTIER QUARTIER1 { get; set; }
         public virtual ICollection<LIVRAISON> LIVRAISON { get; set; }
-        public virtual ICollection<LIVRAISON> LIVRAISON1 { get; set; }
     }
 }

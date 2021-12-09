@@ -27,7 +27,7 @@ namespace Pizzeria
 
         }
 
-        masterEntities db = new masterEntities();
+        PizzeriaEntities db = new PizzeriaEntities();
         private void ucClient_Load(object sender, EventArgs e)
         {
             listeClient.DataSource = db.CLIENT.ToList();

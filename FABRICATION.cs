@@ -20,6 +20,5 @@ namespace Pizzeria
         public int NumPizza { get; set; }
     
         public virtual CataloguePizza CataloguePizza { get; set; }
-        public virtual CataloguePizza CataloguePizza1 { get; set; }
     }
 }

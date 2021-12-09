@@ -17,9 +17,7 @@ namespace Pizzeria
         public CDE_CLIENT()
         {
             this.BON_LIV = new HashSet<BON_LIV>();
-            this.BON_LIV1 = new HashSet<BON_LIV>();
             this.LIGNES_CDE_CLIENT = new HashSet<LIGNES_CDE_CLIENT>();
-            this.LIGNES_CDE_CLIENT1 = new HashSet<LIGNES_CDE_CLIENT>();
         }
     
         public int NumCdeClient { get; set; }
@@ -28,10 +26,7 @@ namespace Pizzeria
         public int NumClient { get; set; }
     
         public virtual ICollection<BON_LIV> BON_LIV { get; set; }
-        public virtual ICollection<BON_LIV> BON_LIV1 { get; set; }
         public virtual CLIENT CLIENT { get; set; }
-        public virtual CLIENT CLIENT1 { get; set; }
         public virtual ICollection<LIGNES_CDE_CLIENT> LIGNES_CDE_CLIENT { get; set; }
-        public virtual ICollection<LIGNES_CDE_CLIENT> LIGNES_CDE_CLIENT1 { get; set; }
     }
 }

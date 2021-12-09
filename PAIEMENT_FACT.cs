@@ -18,6 +18,5 @@ namespace Pizzeria
         public int NumFacture { get; set; }
     
         public virtual FACTURE_CLIENT FACTURE_CLIENT { get; set; }
-        public virtual FACTURE_CLIENT FACTURE_CLIENT1 { get; set; }
     }
 }

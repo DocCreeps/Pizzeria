@@ -17,13 +17,13 @@ namespace Pizzeria
         public QUARTIER()
         {
             this.ADRESSE = new HashSet<ADRESSE>();
-            this.ADRESSE1 = new HashSet<ADRESSE>();
+            this.LIVREUR = new HashSet<LIVREUR>();
         }
     
         public int NumQuartier { get; set; }
         public string NomQuartier { get; set; }
     
         public virtual ICollection<ADRESSE> ADRESSE { get; set; }
-        public virtual ICollection<ADRESSE> ADRESSE1 { get; set; }
+        public virtual ICollection<LIVREUR> LIVREUR { get; set; }
     }
 }

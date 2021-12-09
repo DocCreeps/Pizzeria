@@ -21,5 +21,10 @@ namespace Pizzeria
         {
 
         }
+
+        private void ucCommande_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

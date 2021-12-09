@@ -17,7 +17,6 @@ namespace Pizzeria
         public FACTURE_CLIENT()
         {
             this.PAIEMENT_FACT = new HashSet<PAIEMENT_FACT>();
-            this.PAIEMENT_FACT1 = new HashSet<PAIEMENT_FACT>();
         }
     
         public int NumFacture { get; set; }
@@ -26,8 +25,6 @@ namespace Pizzeria
         public double MontantTotal { get; set; }
     
         public virtual BON_LIV BON_LIV { get; set; }
-        public virtual BON_LIV BON_LIV1 { get; set; }
         public virtual ICollection<PAIEMENT_FACT> PAIEMENT_FACT { get; set; }
-        public virtual ICollection<PAIEMENT_FACT> PAIEMENT_FACT1 { get; set; }
     }
 }

@@ -20,8 +20,6 @@ namespace Pizzeria
         public int Qty { get; set; }
     
         public virtual CataloguePizza CataloguePizza { get; set; }
-        public virtual CataloguePizza CataloguePizza1 { get; set; }
         public virtual CDE_CLIENT CDE_CLIENT { get; set; }
-        public virtual CDE_CLIENT CDE_CLIENT1 { get; set; }
     }
 }

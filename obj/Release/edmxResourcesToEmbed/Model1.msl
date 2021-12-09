@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+  <EntityContainerMapping StorageEntityContainer="PizzeriaModelStoreContainer" CdmEntityContainer="PizzeriaEntities">
     <EntitySetMapping Name="ADRESSE">
-      <EntityTypeMapping TypeName="masterModel.ADRESSE">
+      <EntityTypeMapping TypeName="PizzeriaModel.ADRESSE">
         <MappingFragment StoreEntitySet="ADRESSE">
           <ScalarProperty Name="NumAdresse" ColumnName="NumAdresse" />
           <ScalarProperty Name="Adresse1" ColumnName="Adresse" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BON_LIV">
-      <EntityTypeMapping TypeName="masterModel.BON_LIV">
+      <EntityTypeMapping TypeName="PizzeriaModel.BON_LIV">
         <MappingFragment StoreEntitySet="BON_LIV">
           <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
           <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
@@ -20,7 +20,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CataloguePizza">
-      <EntityTypeMapping TypeName="masterModel.CataloguePizza">
+      <EntityTypeMapping TypeName="PizzeriaModel.CataloguePizza">
         <MappingFragment StoreEntitySet="CataloguePizza">
           <ScalarProperty Name="NumPizza" ColumnName="NumPizza" />
           <ScalarProperty Name="NomPizza" ColumnName="NomPizza" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CDE_CLIENT">
-      <EntityTypeMapping TypeName="masterModel.CDE_CLIENT">
+      <EntityTypeMapping TypeName="PizzeriaModel.CDE_CLIENT">
         <MappingFragment StoreEntitySet="CDE_CLIENT">
           <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
           <ScalarProperty Name="LivreEmporte" ColumnName="LivreEmporte" />
@@ -40,7 +40,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CLIENT">
-      <EntityTypeMapping TypeName="masterModel.CLIENT">
+      <EntityTypeMapping TypeName="PizzeriaModel.CLIENT">
         <MappingFragment StoreEntitySet="CLIENT">
           <ScalarProperty Name="NumClient" ColumnName="NumClient" />
           <ScalarProperty Name="NomClient" ColumnName="NomClient" />
@@ -50,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FABRICATION">
-      <EntityTypeMapping TypeName="masterModel.FABRICATION">
+      <EntityTypeMapping TypeName="PizzeriaModel.FABRICATION">
         <MappingFragment StoreEntitySet="FABRICATION">
           <ScalarProperty Name="NumFab" ColumnName="NumFab" />
           <ScalarProperty Name="QteFab" ColumnName="QteFab" />
@@ -60,7 +60,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FACTURE_CLIENT">
-      <EntityTypeMapping TypeName="masterModel.FACTURE_CLIENT">
+      <EntityTypeMapping TypeName="PizzeriaModel.FACTURE_CLIENT">
         <MappingFragment StoreEntitySet="FACTURE_CLIENT">
           <ScalarProperty Name="NumFacture" ColumnName="NumFacture" />
           <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
@@ -70,7 +70,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LIGNES_CDE_CLIENT">
-      <EntityTypeMapping TypeName="masterModel.LIGNES_CDE_CLIENT">
+      <EntityTypeMapping TypeName="PizzeriaModel.LIGNES_CDE_CLIENT">
         <MappingFragment StoreEntitySet="LIGNES_CDE_CLIENT">
           <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
           <ScalarProperty Name="NumLigneCde" ColumnName="NumLigneCde" />
@@ -80,7 +80,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LIVRAISON">
-      <EntityTypeMapping TypeName="masterModel.LIVRAISON">
+      <EntityTypeMapping TypeName="PizzeriaModel.LIVRAISON">
         <MappingFragment StoreEntitySet="LIVRAISON">
           <ScalarProperty Name="NumLivraison" ColumnName="NumLivraison" />
           <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
@@ -90,8 +90,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="LIVREUR">
+      <EntityTypeMapping TypeName="PizzeriaModel.LIVREUR">
+        <MappingFragment StoreEntitySet="LIVREUR">
+          <ScalarProperty Name="NumLivreur" ColumnName="NumLivreur" />
+          <ScalarProperty Name="NomLivreur" ColumnName="NomLivreur" />
+          <ScalarProperty Name="NumQuartier" ColumnName="NumQuartier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PAIEMENT_FACT">
-      <EntityTypeMapping TypeName="masterModel.PAIEMENT_FACT">
+      <EntityTypeMapping TypeName="PizzeriaModel.PAIEMENT_FACT">
         <MappingFragment StoreEntitySet="PAIEMENT_FACT">
           <ScalarProperty Name="NumPieceCompt" ColumnName="NumPieceCompt" />
           <ScalarProperty Name="NumFacture" ColumnName="NumFacture" />
@@ -99,28 +108,23 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="QUARTIER">
-      <EntityTypeMapping TypeName="masterModel.QUARTIER">
+      <EntityTypeMapping TypeName="PizzeriaModel.QUARTIER">
         <MappingFragment StoreEntitySet="QUARTIER">
           <ScalarProperty Name="NumQuartier" ColumnName="NumQuartier" />
           <ScalarProperty Name="NomQuartier" ColumnName="NomQuartier" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="spt_fallback_db">
-      <EntityTypeMapping TypeName="masterModel.spt_fallback_db">
-        <MappingFragment StoreEntitySet="spt_fallback_db">
-          <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
-          <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
-          <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
-          <ScalarProperty Name="xfallback_dbid" ColumnName="xfallback_dbid" />
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PizzeriaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="dbid" ColumnName="dbid" />
-          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_MScleanupmergepublisher" FunctionName="masterModel.Store.sp_MScleanupmergepublisher" />
-    <FunctionImportMapping FunctionImportName="sp_MSrepl_startup" FunctionName="masterModel.Store.sp_MSrepl_startup" />
   </EntityContainerMapping>
 </Mapping>

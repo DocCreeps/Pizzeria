@@ -16,9 +16,9 @@ namespace Pizzeria
         {
             InitializeComponent();
         }
-        masterEntities db = new masterEntities();
         private void Pizza_Load(object sender, EventArgs e)
         {
+
             ListePizza.DataSource = db.CataloguePizza.ToList();
 
 
@@ -28,5 +28,7 @@ namespace Pizzeria
             comboClient.DisplayMember = "NomPizza";
             comboClient.DataSource = ListC;
         }
+        PizzeriaEntities db = new PizzeriaEntities();
+       
     }
 }

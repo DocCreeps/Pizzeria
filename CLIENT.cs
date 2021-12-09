@@ -17,7 +17,6 @@ namespace Pizzeria
         public CLIENT()
         {
             this.CDE_CLIENT = new HashSet<CDE_CLIENT>();
-            this.CDE_CLIENT1 = new HashSet<CDE_CLIENT>();
         }
     
         public int NumClient { get; set; }
@@ -26,6 +25,5 @@ namespace Pizzeria
         public string Adresse { get; set; }
     
         public virtual ICollection<CDE_CLIENT> CDE_CLIENT { get; set; }
-        public virtual ICollection<CDE_CLIENT> CDE_CLIENT1 { get; set; }
     }
 }

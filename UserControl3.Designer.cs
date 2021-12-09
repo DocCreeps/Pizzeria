@@ -132,6 +132,7 @@
             this.Controls.Add(this.choixPizza);
             this.Name = "ucCommande";
             this.Size = new System.Drawing.Size(1072, 620);
+            this.Load += new System.EventHandler(this.ucCommande_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LigneCommande)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

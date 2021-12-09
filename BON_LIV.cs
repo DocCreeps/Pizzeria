@@ -17,9 +17,7 @@ namespace Pizzeria
         public BON_LIV()
         {
             this.FACTURE_CLIENT = new HashSet<FACTURE_CLIENT>();
-            this.FACTURE_CLIENT1 = new HashSet<FACTURE_CLIENT>();
             this.LIVRAISON = new HashSet<LIVRAISON>();
-            this.LIVRAISON1 = new HashSet<LIVRAISON>();
         }
     
         public int NumBonLiv { get; set; }
@@ -27,10 +25,7 @@ namespace Pizzeria
         public System.DateTime DateLiv { get; set; }
     
         public virtual CDE_CLIENT CDE_CLIENT { get; set; }
-        public virtual CDE_CLIENT CDE_CLIENT1 { get; set; }
         public virtual ICollection<FACTURE_CLIENT> FACTURE_CLIENT { get; set; }
-        public virtual ICollection<FACTURE_CLIENT> FACTURE_CLIENT1 { get; set; }
         public virtual ICollection<LIVRAISON> LIVRAISON { get; set; }
-        public virtual ICollection<LIVRAISON> LIVRAISON1 { get; set; }
     }
 }

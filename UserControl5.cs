@@ -16,5 +16,11 @@ namespace Pizzeria
         {
             InitializeComponent();
         }
+
+        PizzeriaEntities db = new PizzeriaEntities();
+        private void ucLivreur_Load(object sender, EventArgs e)
+        {
+            dataLivraison.DataSource = db.LIVRAISON.ToList();
+        }
     }
 }
