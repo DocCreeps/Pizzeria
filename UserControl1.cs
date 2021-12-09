@@ -37,5 +37,10 @@ namespace Pizzeria
         {
 
         }
+
+        private void addClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

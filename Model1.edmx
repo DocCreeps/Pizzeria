@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="NumPizza" />
           </Key>
-          <Property Name="NumPizza" Type="int" Nullable="false" />
+          <Property Name="NumPizza" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NomPizza" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TaillePizza" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="PrixPizza" Type="float" Nullable="false" />
@@ -43,7 +43,7 @@
           <Key>
             <PropertyRef Name="NumClient" />
           </Key>
-          <Property Name="NumClient" Type="int" Nullable="false" />
+          <Property Name="NumClient" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NomClient" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PrenomClient" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Adresse" Type="varchar" MaxLength="250" Nullable="false" />
@@ -70,7 +70,7 @@
           <Key>
             <PropertyRef Name="NumLigneCde" />
           </Key>
-          <Property Name="NumCdeClient" Type="int" Nullable="false" />
+          <Property Name="NumCdeClient" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NumLigneCde" Type="int" Nullable="false" />
           <Property Name="NumPizza" Type="int" Nullable="false" />
           <Property Name="Qty" Type="int" Nullable="false" />
@@ -338,7 +338,7 @@
           <Key>
             <PropertyRef Name="NumPizza" />
           </Key>
-          <Property Name="NumPizza" Type="Int32" Nullable="false" />
+          <Property Name="NumPizza" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NomPizza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TaillePizza" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PrixPizza" Type="Double" Nullable="false" />
@@ -361,7 +361,7 @@
           <Key>
             <PropertyRef Name="NumClient" />
           </Key>
-          <Property Name="NumClient" Type="Int32" Nullable="false" />
+          <Property Name="NumClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NomClient" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PrenomClient" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Adresse" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
@@ -392,7 +392,7 @@
           <Key>
             <PropertyRef Name="NumLigneCde" />
           </Key>
-          <Property Name="NumCdeClient" Type="Int32" Nullable="false" />
+          <Property Name="NumCdeClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NumLigneCde" Type="Int32" Nullable="false" />
           <Property Name="NumPizza" Type="Int32" Nullable="false" />
           <Property Name="Qty" Type="Int32" Nullable="false" />

@@ -57,14 +57,20 @@ namespace Pizzeria
                 MessageBox.Show("Cette Pizza existe déjà");
             }
 
-            ListePizza.DataSource = db.CataloguePizza.ToList();
-            List<CataloguePizza> ListC = new List<CataloguePizza>();
-            ListC.AddRange(db.CataloguePizza.ToList());
-            ComboPizza.ValueMember = "NumPizza";
-            ComboPizza.DisplayMember = "NomPizza";
-            ComboPizza.DataSource = ListC;
+            
         }
 
+        private void DeletePizza_Click(object sender, EventArgs e)
+        {
+            String numpizz = ComboPizza.SelectedValue.ToString();
+            int verif = db.CataloguePizza.Where(vPizza => vPizza.NomPizza == NouvPizza.NomPizza).Count();
+            
+        }
+        private void ComboPizza_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+         
+        }
         private void prixPizza_TextChanged(object sender, EventArgs e)
         {
 
@@ -80,17 +86,6 @@ namespace Pizzeria
 
         }
 
-        private void ComboPizza_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int numpizz = ComboPizza.;
-            int verif = db.CataloguePizza.Where(vPizza => vPizza.NumPizza == NouvPizza.NumPizza).Count();
-            if (verif == 0)
-            {
-                db.CataloguePizza.Add(NouvPizza);
-                db.SaveChanges();
-                MessageBox.Show("Ajout effectué avec succès");
-                TxtPrixPizza.Text = NouvPizza.PrixPizza.ToString();
-            }
-        }
+       
     }
 }

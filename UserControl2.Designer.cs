@@ -44,10 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTaillePizza = new System.Windows.Forms.TextBox();
-            this.TxtPrixPizza = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.DeletePizza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListePizza)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,7 +109,7 @@
             this.ComboPizza.Name = "ComboPizza";
             this.ComboPizza.Size = new System.Drawing.Size(403, 21);
             this.ComboPizza.TabIndex = 16;
-            this.ComboPizza.SelectedIndexChanged += new System.EventHandler(this.comboClient_SelectedIndexChanged);
+            this.ComboPizza.SelectedIndexChanged += new System.EventHandler(this.ComboPizza_SelectedIndexChanged);
             // 
             // taillePizza
             // 
@@ -182,46 +179,21 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Recherche Pizza:";
             // 
-            // txtTaillePizza
+            // DeletePizza
             // 
-            this.txtTaillePizza.Location = new System.Drawing.Point(297, 505);
-            this.txtTaillePizza.Name = "txtTaillePizza";
-            this.txtTaillePizza.Size = new System.Drawing.Size(83, 20);
-            this.txtTaillePizza.TabIndex = 31;
-            // 
-            // TxtPrixPizza
-            // 
-            this.TxtPrixPizza.Location = new System.Drawing.Point(519, 505);
-            this.TxtPrixPizza.Name = "TxtPrixPizza";
-            this.TxtPrixPizza.Size = new System.Drawing.Size(87, 20);
-            this.TxtPrixPizza.TabIndex = 32;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(463, 508);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 13);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Prix : ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(239, 508);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Taille :";
+            this.DeletePizza.Location = new System.Drawing.Point(359, 483);
+            this.DeletePizza.Name = "DeletePizza";
+            this.DeletePizza.Size = new System.Drawing.Size(160, 44);
+            this.DeletePizza.TabIndex = 31;
+            this.DeletePizza.Text = "Supprimer Pizza";
+            this.DeletePizza.UseVisualStyleBackColor = true;
+            this.DeletePizza.Click += new System.EventHandler(this.DeletePizza_Click);
             // 
             // ucPizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.TxtPrixPizza);
-            this.Controls.Add(this.txtTaillePizza);
+            this.Controls.Add(this.DeletePizza);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNumPizza);
@@ -264,9 +236,6 @@
         private System.Windows.Forms.Label label7;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTaillePizza;
-        private System.Windows.Forms.TextBox TxtPrixPizza;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button DeletePizza;
     }
 }
