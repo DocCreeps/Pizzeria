@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADRESSE">
+    <Key>
+      <PropertyRef Name="NumAdresse" />
+    </Key>
+    <Property Name="NumAdresse" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adresse" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NumQuartier" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BON_LIV">
+    <Key>
+      <PropertyRef Name="NumBonLiv" />
+    </Key>
+    <Property Name="NumBonLiv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumCdeClient" Type="int" Nullable="false" />
+    <Property Name="DateLiv" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CataloguePizza">
+    <Key>
+      <PropertyRef Name="NumPizza" />
+    </Key>
+    <Property Name="NumPizza" Type="int" Nullable="false" />
+    <Property Name="NomPizza" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TaillePizza" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PrixPizza" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CDE_CLIENT">
+    <Key>
+      <PropertyRef Name="NumCdeClient" />
+    </Key>
+    <Property Name="NumCdeClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LivreEmporte" Type="bit" Nullable="false" />
+    <Property Name="DateCde" Type="datetime" Nullable="false" />
+    <Property Name="NumClient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="NumClient" />
+    </Key>
+    <Property Name="NumClient" Type="int" Nullable="false" />
+    <Property Name="NomClient" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrenomClient" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Adresse" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FABRICATION">
+    <Key>
+      <PropertyRef Name="NumFab" />
+    </Key>
+    <Property Name="NumFab" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QteFab" Type="int" Nullable="false" />
+    <Property Name="DateFab" Type="datetime" Nullable="false" />
+    <Property Name="NumPizza" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FACTURE_CLIENT">
+    <Key>
+      <PropertyRef Name="NumFacture" />
+    </Key>
+    <Property Name="NumFacture" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumBonLiv" Type="int" Nullable="false" />
+    <Property Name="DateFacture" Type="datetime" Nullable="false" />
+    <Property Name="MontantTotal" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIGNES_CDE_CLIENT">
+    <Key>
+      <PropertyRef Name="NumCdeClient" />
+      <PropertyRef Name="NumLigneCde" />
+    </Key>
+    <Property Name="NumCdeClient" Type="int" Nullable="false" />
+    <Property Name="NumLigneCde" Type="int" Nullable="false" />
+    <Property Name="NumPizza" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIVRAISON">
+    <Key>
+      <PropertyRef Name="NumLivraison" />
+    </Key>
+    <Property Name="NumLivraison" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumBonLiv" Type="int" Nullable="false" />
+    <Property Name="DateDepart" Type="datetime" />
+    <Property Name="DateArrivee" Type="datetime" />
+    <Property Name="NumAdresse" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.MSreplication_options' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="PAIEMENT_FACT">
+    <Key>
+      <PropertyRef Name="NumPieceCompt" />
+    </Key>
+    <Property Name="NumPieceCompt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumFacture" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QUARTIER">
+    <Key>
+      <PropertyRef Name="NumQuartier" />
+    </Key>
+    <Property Name="NumQuartier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomQuartier" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.spt_fallback_db' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="spt_fallback_db">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_dbid" Type="smallint" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dbid" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="version" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.spt_fallback_dev' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.spt_fallback_usg' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.spt_monitor' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'master.dbo.spt_values' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <Association Name="FK__ADRESSE__NumQuar__25A691D2">
+    <End Role="QUARTIER" Type="Self.QUARTIER" Multiplicity="1" />
+    <End Role="ADRESSE" Type="Self.ADRESSE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUARTIER">
+        <PropertyRef Name="NumQuartier" />
+      </Principal>
+      <Dependent Role="ADRESSE">
+        <PropertyRef Name="NumQuartier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ADRESSE__NumQuar__39AD8A7F">
+    <End Role="QUARTIER" Type="Self.QUARTIER" Multiplicity="1" />
+    <End Role="ADRESSE" Type="Self.ADRESSE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUARTIER">
+        <PropertyRef Name="NumQuartier" />
+      </Principal>
+      <Dependent Role="ADRESSE">
+        <PropertyRef Name="NumQuartier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BON_LIV__NumCdeC__269AB60B">
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="1" />
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Principal>
+      <Dependent Role="BON_LIV">
+        <PropertyRef Name="NumCdeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BON_LIV__NumCdeC__3AA1AEB8">
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="1" />
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Principal>
+      <Dependent Role="BON_LIV">
+        <PropertyRef Name="NumCdeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CDE_CLIEN__NumCl__278EDA44">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="NumClient" />
+      </Principal>
+      <Dependent Role="CDE_CLIENT">
+        <PropertyRef Name="NumClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CDE_CLIEN__NumCl__3B95D2F1">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="NumClient" />
+      </Principal>
+      <Dependent Role="CDE_CLIENT">
+        <PropertyRef Name="NumClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FABRICATI__NumPi__2882FE7D">
+    <End Role="CataloguePizza" Type="Self.CataloguePizza" Multiplicity="1" />
+    <End Role="FABRICATION" Type="Self.FABRICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CataloguePizza">
+        <PropertyRef Name="NumPizza" />
+      </Principal>
+      <Dependent Role="FABRICATION">
+        <PropertyRef Name="NumPizza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FABRICATI__NumPi__3C89F72A">
+    <End Role="CataloguePizza" Type="Self.CataloguePizza" Multiplicity="1" />
+    <End Role="FABRICATION" Type="Self.FABRICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CataloguePizza">
+        <PropertyRef Name="NumPizza" />
+      </Principal>
+      <Dependent Role="FABRICATION">
+        <PropertyRef Name="NumPizza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURE_C__NumBo__297722B6">
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="1" />
+    <End Role="FACTURE_CLIENT" Type="Self.FACTURE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BON_LIV">
+        <PropertyRef Name="NumBonLiv" />
+      </Principal>
+      <Dependent Role="FACTURE_CLIENT">
+        <PropertyRef Name="NumBonLiv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURE_C__NumBo__3D7E1B63">
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="1" />
+    <End Role="FACTURE_CLIENT" Type="Self.FACTURE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BON_LIV">
+        <PropertyRef Name="NumBonLiv" />
+      </Principal>
+      <Dependent Role="FACTURE_CLIENT">
+        <PropertyRef Name="NumBonLiv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNES_CD__NumCd__2A6B46EF">
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="1" />
+    <End Role="LIGNES_CDE_CLIENT" Type="Self.LIGNES_CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Principal>
+      <Dependent Role="LIGNES_CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNES_CD__NumCd__3E723F9C">
+    <End Role="CDE_CLIENT" Type="Self.CDE_CLIENT" Multiplicity="1" />
+    <End Role="LIGNES_CDE_CLIENT" Type="Self.LIGNES_CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Principal>
+      <Dependent Role="LIGNES_CDE_CLIENT">
+        <PropertyRef Name="NumCdeClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNES_CD__NumPi__2B5F6B28">
+    <End Role="CataloguePizza" Type="Self.CataloguePizza" Multiplicity="1" />
+    <End Role="LIGNES_CDE_CLIENT" Type="Self.LIGNES_CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CataloguePizza">
+        <PropertyRef Name="NumPizza" />
+      </Principal>
+      <Dependent Role="LIGNES_CDE_CLIENT">
+        <PropertyRef Name="NumPizza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNES_CD__NumPi__3F6663D5">
+    <End Role="CataloguePizza" Type="Self.CataloguePizza" Multiplicity="1" />
+    <End Role="LIGNES_CDE_CLIENT" Type="Self.LIGNES_CDE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CataloguePizza">
+        <PropertyRef Name="NumPizza" />
+      </Principal>
+      <Dependent Role="LIGNES_CDE_CLIENT">
+        <PropertyRef Name="NumPizza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIVRAISON__NumAd__2C538F61">
+    <End Role="ADRESSE" Type="Self.ADRESSE" Multiplicity="1" />
+    <End Role="LIVRAISON" Type="Self.LIVRAISON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADRESSE">
+        <PropertyRef Name="NumAdresse" />
+      </Principal>
+      <Dependent Role="LIVRAISON">
+        <PropertyRef Name="NumAdresse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIVRAISON__NumAd__405A880E">
+    <End Role="ADRESSE" Type="Self.ADRESSE" Multiplicity="1" />
+    <End Role="LIVRAISON" Type="Self.LIVRAISON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADRESSE">
+        <PropertyRef Name="NumAdresse" />
+      </Principal>
+      <Dependent Role="LIVRAISON">
+        <PropertyRef Name="NumAdresse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIVRAISON__NumBo__2D47B39A">
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="1" />
+    <End Role="LIVRAISON" Type="Self.LIVRAISON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BON_LIV">
+        <PropertyRef Name="NumBonLiv" />
+      </Principal>
+      <Dependent Role="LIVRAISON">
+        <PropertyRef Name="NumBonLiv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIVRAISON__NumBo__414EAC47">
+    <End Role="BON_LIV" Type="Self.BON_LIV" Multiplicity="1" />
+    <End Role="LIVRAISON" Type="Self.LIVRAISON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BON_LIV">
+        <PropertyRef Name="NumBonLiv" />
+      </Principal>
+      <Dependent Role="LIVRAISON">
+        <PropertyRef Name="NumBonLiv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PAIEMENT___NumFa__2E3BD7D3">
+    <End Role="FACTURE_CLIENT" Type="Self.FACTURE_CLIENT" Multiplicity="1" />
+    <End Role="PAIEMENT_FACT" Type="Self.PAIEMENT_FACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACTURE_CLIENT">
+        <PropertyRef Name="NumFacture" />
+      </Principal>
+      <Dependent Role="PAIEMENT_FACT">
+        <PropertyRef Name="NumFacture" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PAIEMENT___NumFa__4242D080">
+    <End Role="FACTURE_CLIENT" Type="Self.FACTURE_CLIENT" Multiplicity="1" />
+    <End Role="PAIEMENT_FACT" Type="Self.PAIEMENT_FACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FACTURE_CLIENT">
+        <PropertyRef Name="NumFacture" />
+      </Principal>
+      <Dependent Role="PAIEMENT_FACT">
+        <PropertyRef Name="NumFacture" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_MScleanupmergepublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_MSrepl_startup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="ADRESSE" EntityType="Self.ADRESSE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BON_LIV" EntityType="Self.BON_LIV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CataloguePizza" EntityType="Self.CataloguePizza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CDE_CLIENT" EntityType="Self.CDE_CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FABRICATION" EntityType="Self.FABRICATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACTURE_CLIENT" EntityType="Self.FACTURE_CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIGNES_CDE_CLIENT" EntityType="Self.LIGNES_CDE_CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIVRAISON" EntityType="Self.LIVRAISON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAIEMENT_FACT" EntityType="Self.PAIEMENT_FACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUARTIER" EntityType="Self.QUARTIER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_fallback_db].[xserver_name] AS [xserver_name], 
+[spt_fallback_db].[xdttm_ins] AS [xdttm_ins], 
+[spt_fallback_db].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+[spt_fallback_db].[xfallback_dbid] AS [xfallback_dbid], 
+[spt_fallback_db].[name] AS [name], 
+[spt_fallback_db].[dbid] AS [dbid], 
+[spt_fallback_db].[status] AS [status], 
+[spt_fallback_db].[version] AS [version]
+FROM [dbo].[spt_fallback_db] AS [spt_fallback_db]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ADRESSE__NumQuar__25A691D2" Association="Self.FK__ADRESSE__NumQuar__25A691D2">
+      <End Role="QUARTIER" EntitySet="QUARTIER" />
+      <End Role="ADRESSE" EntitySet="ADRESSE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ADRESSE__NumQuar__39AD8A7F" Association="Self.FK__ADRESSE__NumQuar__39AD8A7F">
+      <End Role="QUARTIER" EntitySet="QUARTIER" />
+      <End Role="ADRESSE" EntitySet="ADRESSE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BON_LIV__NumCdeC__269AB60B" Association="Self.FK__BON_LIV__NumCdeC__269AB60B">
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BON_LIV__NumCdeC__3AA1AEB8" Association="Self.FK__BON_LIV__NumCdeC__3AA1AEB8">
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CDE_CLIEN__NumCl__278EDA44" Association="Self.FK__CDE_CLIEN__NumCl__278EDA44">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CDE_CLIEN__NumCl__3B95D2F1" Association="Self.FK__CDE_CLIEN__NumCl__3B95D2F1">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FABRICATI__NumPi__2882FE7D" Association="Self.FK__FABRICATI__NumPi__2882FE7D">
+      <End Role="CataloguePizza" EntitySet="CataloguePizza" />
+      <End Role="FABRICATION" EntitySet="FABRICATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FABRICATI__NumPi__3C89F72A" Association="Self.FK__FABRICATI__NumPi__3C89F72A">
+      <End Role="CataloguePizza" EntitySet="CataloguePizza" />
+      <End Role="FABRICATION" EntitySet="FABRICATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURE_C__NumBo__297722B6" Association="Self.FK__FACTURE_C__NumBo__297722B6">
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+      <End Role="FACTURE_CLIENT" EntitySet="FACTURE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURE_C__NumBo__3D7E1B63" Association="Self.FK__FACTURE_C__NumBo__3D7E1B63">
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+      <End Role="FACTURE_CLIENT" EntitySet="FACTURE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNES_CD__NumCd__2A6B46EF" Association="Self.FK__LIGNES_CD__NumCd__2A6B46EF">
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+      <End Role="LIGNES_CDE_CLIENT" EntitySet="LIGNES_CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNES_CD__NumCd__3E723F9C" Association="Self.FK__LIGNES_CD__NumCd__3E723F9C">
+      <End Role="CDE_CLIENT" EntitySet="CDE_CLIENT" />
+      <End Role="LIGNES_CDE_CLIENT" EntitySet="LIGNES_CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNES_CD__NumPi__2B5F6B28" Association="Self.FK__LIGNES_CD__NumPi__2B5F6B28">
+      <End Role="CataloguePizza" EntitySet="CataloguePizza" />
+      <End Role="LIGNES_CDE_CLIENT" EntitySet="LIGNES_CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNES_CD__NumPi__3F6663D5" Association="Self.FK__LIGNES_CD__NumPi__3F6663D5">
+      <End Role="CataloguePizza" EntitySet="CataloguePizza" />
+      <End Role="LIGNES_CDE_CLIENT" EntitySet="LIGNES_CDE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIVRAISON__NumAd__2C538F61" Association="Self.FK__LIVRAISON__NumAd__2C538F61">
+      <End Role="ADRESSE" EntitySet="ADRESSE" />
+      <End Role="LIVRAISON" EntitySet="LIVRAISON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIVRAISON__NumAd__405A880E" Association="Self.FK__LIVRAISON__NumAd__405A880E">
+      <End Role="ADRESSE" EntitySet="ADRESSE" />
+      <End Role="LIVRAISON" EntitySet="LIVRAISON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIVRAISON__NumBo__2D47B39A" Association="Self.FK__LIVRAISON__NumBo__2D47B39A">
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+      <End Role="LIVRAISON" EntitySet="LIVRAISON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIVRAISON__NumBo__414EAC47" Association="Self.FK__LIVRAISON__NumBo__414EAC47">
+      <End Role="BON_LIV" EntitySet="BON_LIV" />
+      <End Role="LIVRAISON" EntitySet="LIVRAISON" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PAIEMENT___NumFa__2E3BD7D3" Association="Self.FK__PAIEMENT___NumFa__2E3BD7D3">
+      <End Role="FACTURE_CLIENT" EntitySet="FACTURE_CLIENT" />
+      <End Role="PAIEMENT_FACT" EntitySet="PAIEMENT_FACT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PAIEMENT___NumFa__4242D080" Association="Self.FK__PAIEMENT___NumFa__4242D080">
+      <End Role="FACTURE_CLIENT" EntitySet="FACTURE_CLIENT" />
+      <End Role="PAIEMENT_FACT" EntitySet="PAIEMENT_FACT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

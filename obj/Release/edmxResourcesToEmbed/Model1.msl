@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+    <EntitySetMapping Name="ADRESSE">
+      <EntityTypeMapping TypeName="masterModel.ADRESSE">
+        <MappingFragment StoreEntitySet="ADRESSE">
+          <ScalarProperty Name="NumAdresse" ColumnName="NumAdresse" />
+          <ScalarProperty Name="Adresse1" ColumnName="Adresse" />
+          <ScalarProperty Name="NumQuartier" ColumnName="NumQuartier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BON_LIV">
+      <EntityTypeMapping TypeName="masterModel.BON_LIV">
+        <MappingFragment StoreEntitySet="BON_LIV">
+          <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
+          <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
+          <ScalarProperty Name="DateLiv" ColumnName="DateLiv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CataloguePizza">
+      <EntityTypeMapping TypeName="masterModel.CataloguePizza">
+        <MappingFragment StoreEntitySet="CataloguePizza">
+          <ScalarProperty Name="NumPizza" ColumnName="NumPizza" />
+          <ScalarProperty Name="NomPizza" ColumnName="NomPizza" />
+          <ScalarProperty Name="TaillePizza" ColumnName="TaillePizza" />
+          <ScalarProperty Name="PrixPizza" ColumnName="PrixPizza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CDE_CLIENT">
+      <EntityTypeMapping TypeName="masterModel.CDE_CLIENT">
+        <MappingFragment StoreEntitySet="CDE_CLIENT">
+          <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
+          <ScalarProperty Name="LivreEmporte" ColumnName="LivreEmporte" />
+          <ScalarProperty Name="DateCde" ColumnName="DateCde" />
+          <ScalarProperty Name="NumClient" ColumnName="NumClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT">
+      <EntityTypeMapping TypeName="masterModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="NumClient" ColumnName="NumClient" />
+          <ScalarProperty Name="NomClient" ColumnName="NomClient" />
+          <ScalarProperty Name="PrenomClient" ColumnName="PrenomClient" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FABRICATION">
+      <EntityTypeMapping TypeName="masterModel.FABRICATION">
+        <MappingFragment StoreEntitySet="FABRICATION">
+          <ScalarProperty Name="NumFab" ColumnName="NumFab" />
+          <ScalarProperty Name="QteFab" ColumnName="QteFab" />
+          <ScalarProperty Name="DateFab" ColumnName="DateFab" />
+          <ScalarProperty Name="NumPizza" ColumnName="NumPizza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURE_CLIENT">
+      <EntityTypeMapping TypeName="masterModel.FACTURE_CLIENT">
+        <MappingFragment StoreEntitySet="FACTURE_CLIENT">
+          <ScalarProperty Name="NumFacture" ColumnName="NumFacture" />
+          <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
+          <ScalarProperty Name="DateFacture" ColumnName="DateFacture" />
+          <ScalarProperty Name="MontantTotal" ColumnName="MontantTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIGNES_CDE_CLIENT">
+      <EntityTypeMapping TypeName="masterModel.LIGNES_CDE_CLIENT">
+        <MappingFragment StoreEntitySet="LIGNES_CDE_CLIENT">
+          <ScalarProperty Name="NumCdeClient" ColumnName="NumCdeClient" />
+          <ScalarProperty Name="NumLigneCde" ColumnName="NumLigneCde" />
+          <ScalarProperty Name="NumPizza" ColumnName="NumPizza" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIVRAISON">
+      <EntityTypeMapping TypeName="masterModel.LIVRAISON">
+        <MappingFragment StoreEntitySet="LIVRAISON">
+          <ScalarProperty Name="NumLivraison" ColumnName="NumLivraison" />
+          <ScalarProperty Name="NumBonLiv" ColumnName="NumBonLiv" />
+          <ScalarProperty Name="DateDepart" ColumnName="DateDepart" />
+          <ScalarProperty Name="DateArrivee" ColumnName="DateArrivee" />
+          <ScalarProperty Name="NumAdresse" ColumnName="NumAdresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIEMENT_FACT">
+      <EntityTypeMapping TypeName="masterModel.PAIEMENT_FACT">
+        <MappingFragment StoreEntitySet="PAIEMENT_FACT">
+          <ScalarProperty Name="NumPieceCompt" ColumnName="NumPieceCompt" />
+          <ScalarProperty Name="NumFacture" ColumnName="NumFacture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUARTIER">
+      <EntityTypeMapping TypeName="masterModel.QUARTIER">
+        <MappingFragment StoreEntitySet="QUARTIER">
+          <ScalarProperty Name="NumQuartier" ColumnName="NumQuartier" />
+          <ScalarProperty Name="NomQuartier" ColumnName="NomQuartier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spt_fallback_db">
+      <EntityTypeMapping TypeName="masterModel.spt_fallback_db">
+        <MappingFragment StoreEntitySet="spt_fallback_db">
+          <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+          <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+          <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+          <ScalarProperty Name="xfallback_dbid" ColumnName="xfallback_dbid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dbid" ColumnName="dbid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_MScleanupmergepublisher" FunctionName="masterModel.Store.sp_MScleanupmergepublisher" />
+    <FunctionImportMapping FunctionImportName="sp_MSrepl_startup" FunctionName="masterModel.Store.sp_MSrepl_startup" />
+  </EntityContainerMapping>
+</Mapping>
