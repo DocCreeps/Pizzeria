@@ -24,9 +24,9 @@ namespace Pizzeria
 
             List<CataloguePizza> ListC = new List<CataloguePizza>();
             ListC.AddRange(db.CataloguePizza.ToList());
-            comboClient.ValueMember = "NumPizza";
-            comboClient.DisplayMember = "NomPizza";
-            comboClient.DataSource = ListC;
+            ComboPizza.ValueMember = "NumPizza";
+            ComboPizza.DisplayMember = "NomPizza";
+            ComboPizza.DataSource = ListC;
         }
         PizzeriaEntities db = new PizzeriaEntities();
 
@@ -37,6 +37,8 @@ namespace Pizzeria
         public CataloguePizza NouvPizza = new CataloguePizza();
         private void ADDPizza_Click(object sender, EventArgs e)
         {
+            int numeroPizza = Convert.ToInt32(txtNumPizza.Text);
+            NouvPizza.NumPizza =numeroPizza ;
             NouvPizza.NomPizza = newPizza.Text;
             NouvPizza.TaillePizza = taillePizza.Text;
             double prix = Convert.ToDouble(prixPizza.Text);
@@ -48,12 +50,19 @@ namespace Pizzeria
                 db.CataloguePizza.Add(NouvPizza);
                 db.SaveChanges();
                 MessageBox.Show("Ajout effectué avec succès");
-                
+                txtNumPizza.Text = NouvPizza.NumPizza.ToString();
             }
             else
             {
                 MessageBox.Show("Cette Pizza existe déjà");
             }
+
+            ListePizza.DataSource = db.CataloguePizza.ToList();
+            List<CataloguePizza> ListC = new List<CataloguePizza>();
+            ListC.AddRange(db.CataloguePizza.ToList());
+            ComboPizza.ValueMember = "NumPizza";
+            ComboPizza.DisplayMember = "NomPizza";
+            ComboPizza.DataSource = ListC;
         }
 
         private void prixPizza_TextChanged(object sender, EventArgs e)
@@ -64,6 +73,24 @@ namespace Pizzeria
         private void taillePizza_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListePizza_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ComboPizza_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int numpizz = ComboPizza.;
+            int verif = db.CataloguePizza.Where(vPizza => vPizza.NumPizza == NouvPizza.NumPizza).Count();
+            if (verif == 0)
+            {
+                db.CataloguePizza.Add(NouvPizza);
+                db.SaveChanges();
+                MessageBox.Show("Ajout effectué avec succès");
+                TxtPrixPizza.Text = NouvPizza.PrixPizza.ToString();
+            }
         }
     }
 }
