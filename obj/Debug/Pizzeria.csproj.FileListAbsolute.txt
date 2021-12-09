@@ -11,3 +11,10 @@ C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.csproj.GenerateReso
 C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.csproj.CopyComplete
 C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.exe
 C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.pdb
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucPizza.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucClient.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucCommande.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucFab.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucLivreur.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucFacture.resources
+C:\Users\doria\Desktop\Csharp\TP\Pizzeria\obj\Debug\Pizzeria.ucLivraison.resources
