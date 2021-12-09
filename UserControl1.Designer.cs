@@ -44,6 +44,7 @@
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(287, 20);
             this.txtClient.TabIndex = 0;
+            this.txtClient.TextChanged += new System.EventHandler(this.txtClient_TextChanged);
             // 
             // contextMenuStrip1
             // 

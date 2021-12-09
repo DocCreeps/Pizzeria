@@ -32,5 +32,10 @@ namespace Pizzeria
         {
             listeClient.DataSource = db.CLIENT.ToList();
         }
+
+        private void txtClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

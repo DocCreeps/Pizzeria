@@ -29,6 +29,41 @@ namespace Pizzeria
             comboClient.DataSource = ListC;
         }
         PizzeriaEntities db = new PizzeriaEntities();
-       
+
+        private void newPizza_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public CataloguePizza NouvPizza = new CataloguePizza();
+        private void ADDPizza_Click(object sender, EventArgs e)
+        {
+            NouvPizza.NomPizza = newPizza.Text;
+            NouvPizza.TaillePizza = taillePizza.Text;
+            double prix = Convert.ToDouble(prixPizza.Text);
+            NouvPizza.PrixPizza = prix;
+
+            int verif = db.CataloguePizza.Where(vPizza => vPizza.NomPizza == NouvPizza.NomPizza).Count();
+            if (verif == 0)
+            {
+                db.CataloguePizza.Add(NouvPizza);
+                db.SaveChanges();
+                MessageBox.Show("Ajout effectué avec succès");
+                
+            }
+            else
+            {
+                MessageBox.Show("Cette Pizza existe déjà");
+            }
+        }
+
+        private void prixPizza_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taillePizza_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

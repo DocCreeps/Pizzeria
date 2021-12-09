@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ListePizza = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.ADD = new System.Windows.Forms.Button();
+            this.ADDPizza = new System.Windows.Forms.Button();
             this.comboClient = new System.Windows.Forms.ComboBox();
             this.taillePizza = new System.Windows.Forms.TextBox();
             this.prixPizza = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.newPizza.Name = "newPizza";
             this.newPizza.Size = new System.Drawing.Size(246, 20);
             this.newPizza.TabIndex = 21;
+            this.newPizza.TextChanged += new System.EventHandler(this.newPizza_TextChanged);
             // 
             // label2
             // 
@@ -85,14 +86,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Liste Pizza :";
             // 
-            // ADD
+            // ADDPizza
             // 
-            this.ADD.Location = new System.Drawing.Point(391, 145);
-            this.ADD.Name = "ADD";
-            this.ADD.Size = new System.Drawing.Size(102, 29);
-            this.ADD.TabIndex = 17;
-            this.ADD.Text = "Ajouter";
-            this.ADD.UseVisualStyleBackColor = true;
+            this.ADDPizza.Location = new System.Drawing.Point(391, 145);
+            this.ADDPizza.Name = "ADDPizza";
+            this.ADDPizza.Size = new System.Drawing.Size(102, 29);
+            this.ADDPizza.TabIndex = 17;
+            this.ADDPizza.Text = "Ajouter";
+            this.ADDPizza.UseVisualStyleBackColor = true;
+            this.ADDPizza.Click += new System.EventHandler(this.ADDPizza_Click);
             // 
             // comboClient
             // 
@@ -108,6 +110,7 @@
             this.taillePizza.Name = "taillePizza";
             this.taillePizza.Size = new System.Drawing.Size(130, 20);
             this.taillePizza.TabIndex = 23;
+            this.taillePizza.TextChanged += new System.EventHandler(this.taillePizza_TextChanged);
             // 
             // prixPizza
             // 
@@ -115,6 +118,7 @@
             this.prixPizza.Name = "prixPizza";
             this.prixPizza.Size = new System.Drawing.Size(130, 20);
             this.prixPizza.TabIndex = 24;
+            this.prixPizza.TextChanged += new System.EventHandler(this.prixPizza_TextChanged);
             // 
             // label4
             // 
@@ -157,7 +161,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ListePizza);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ADD);
+            this.Controls.Add(this.ADDPizza);
             this.Controls.Add(this.comboClient);
             this.Name = "ucPizza";
             this.Size = new System.Drawing.Size(1004, 639);
@@ -175,7 +179,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ListePizza;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ADD;
+        private System.Windows.Forms.Button ADDPizza;
         private System.Windows.Forms.ComboBox comboClient;
         private System.Windows.Forms.TextBox taillePizza;
         private System.Windows.Forms.TextBox prixPizza;
