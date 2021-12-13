@@ -16,6 +16,7 @@ namespace Pizzeria
         {
             InitializeComponent();
         }
+        PizzeriaEntities db = new PizzeriaEntities();
         private void Pizza_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +29,7 @@ namespace Pizzeria
             ComboPizza.DisplayMember = "NomPizza";
             ComboPizza.DataSource = ListC;
         }
-        PizzeriaEntities db = new PizzeriaEntities();
+        
 
         private void newPizza_TextChanged(object sender, EventArgs e)
         {
@@ -56,20 +57,32 @@ namespace Pizzeria
             {
                 MessageBox.Show("Cette Pizza existe déjà");
             }
-
-            
         }
 
         private void DeletePizza_Click(object sender, EventArgs e)
         {
             String numpizz = ComboPizza.SelectedValue.ToString();
-            int verif = db.CataloguePizza.Where(vPizza => vPizza.NomPizza == NouvPizza.NomPizza).Count();
-            
+            int Index = Convert.ToInt32(numpizz);
+
+            var result = db.CataloguePizza.SingleOrDefault(cl => cl.NumPizza == Index);
+
+            if (result != null)
+            {
+
+                db.CataloguePizza.Remove(result);
+                db.SaveChanges();
+                MessageBox.Show("Cette pizza a été supprimé ");
+
+            }
+            else
+            {
+                MessageBox.Show("Cette pizza n'existe pas ");
+
+            }
         }
         private void ComboPizza_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-         
         }
         private void prixPizza_TextChanged(object sender, EventArgs e)
         {
